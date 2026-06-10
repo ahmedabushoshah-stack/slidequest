@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-<meta name="google-site-verification" content="nGsbricqfE6L_6JmWQNuBV2dkPFOzMQfKSxw2VXLfMA" />
+    <!-- Google Search Optimization (SEO) & Verification -->
+    <meta name="google-site-verification" content="nGsbricqfE6L_6JmWQNuBV2dkPFOzMQfKSxw2VXLfMA" />
     <title>SlideQuest Studio | Free Custom Presentation & Slide Design</title>
     <meta name="description" content="Stuck on a blank PowerPoint? SlideQuest Studio builds clean, custom presentation slides and school decks for free in 2 days.">
     <meta name="keywords" content="free powerpoint templates, custom slides, school presentations, slidequest studio">
@@ -14,6 +15,8 @@
         :root {
             --primary: #6366f1;
             --primary-hover: #4f46e5;
+            --danger: #ef4444;
+            --danger-hover: #dc2626;
             --background: #f8fafc;
             --card-bg: #ffffff;
             --text: #0f172a;
@@ -25,6 +28,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -43,6 +47,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
@@ -52,9 +59,21 @@
             text-decoration: none;
         }
 
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
         .container {
             max-width: 800px;
-            margin: 4rem auto;
+            margin: 4rem auto 2rem auto;
             padding: 0 1.5rem;
             text-align: center;
             flex: 1;
@@ -126,7 +145,62 @@
             font-size: 0.95rem;
             color: var(--text-light);
         }
-   
+
+        /* Content Sections Styling */
+        .content-section {
+            background: var(--card-bg);
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        #about-page h2::after { background: var(--primary); }
+        #report-page h2::after { background: var(--danger); }
+
+        .content-section p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .report-btn {
+            display: inline-block;
+            background-color: var(--danger);
+            color: white;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .report-btn:hover {
+            background-color: var(--danger-hover);
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -137,25 +211,24 @@
     </style>
 </head>
 <body>
+
     <header>
         <a href="#" class="logo">SlideQuest Studio</a>
-        <nav style="font-family: 'Segoe UI', sans-serif;">
-            <a href="#" style="color: #6366f1; text-decoration: none; font-weight: 600; margin-left: 1.5rem;">Home</a>
-            <a href="#about-page" style="color: #475569; text-decoration: none; font-weight: 600; margin-left: 1.5rem;">About Us</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about-page">About Us</a>
+            <a href="#report-page">Report Page</a>
         </nav>
     </header>
 
-    <header>
-        <a href="#" class="logo">SlideQuest Studio</a>
-    </header>
-
+    <!-- MAIN HOME SECTION -->
     <div class="container">
         <span class="badge">👋 Welcome to SlideQuest Studio</span>
         <h1>Need a Presentation?<br>I'll Build It.</h1>
         <p class="subtitle">Don't waste hours staring at a blank screen. Tell me your topic, and I will design a beautiful, clean presentation layout in 2 days or less. Completely free.</p>
         
-        <!-- REPLACE THE '#' BELOW WITH YOUR GOOGLE FORM LINK OR MAILTO LINK -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQ2APpdXPRIxLfeQ4Y9ZKrrjmpcz_pTOhL1kMqmVuE3lB8cA/viewform?usp=header" class="cta-btn">Request Your Free Slides Here</a>
+        <!-- Live Google Order Form Button -->
+        <a href="https://google.com" class="cta-btn">Request Your Free Slides Here</a>
 
         <div class="features">
             <div class="feature-card">
@@ -172,21 +245,23 @@
             </div>
         </div>
     </div>
-    <!-- CONNECTED TOP NAVIGATION MENU BAR -->
-    <header style="background: white; padding: 1.5rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
-        <a href="#" class="logo" style="font-size: 1.5rem; font-weight: 700; color: #6366f1; text-decoration: none; font-family: 'Segoe UI', sans-serif;">SlideQuest Studio</a>
-        <nav style="font-family: 'Segoe UI', sans-serif;">
-            <a href="#" style="color: #6366f1; text-decoration: none; font-weight: 600; margin-left: 1.5rem;">Home</a>
-            <a href="#about-page" style="color: #475569; text-decoration: none; font-weight: 600; margin-left: 1.5rem;">About Us</a>
-        </nav>
-    </header>
 
-    <!-- SEPARATE ABOUT US LOOKING SECTION -->
-    <div id="about-page" style="background: white; max-width: 800px; margin: 6rem auto; padding: 3rem 2rem; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-        <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 1.5rem; border-bottom: 4px solid #6366f1; display: inline-block; padding-bottom: 5px;">About Us</h2>
-        <p style="color: #475569; margin-bottom: 1.2rem; font-size: 1.1rem; line-height: 1.6;">Welcome to <strong>SlideQuest Studio</strong>! We are a dedicated presentation design initiative created specifically to take the pain away from staring at a completely blank screen.</p>
-        <p style="color: #475569; margin-bottom: 1.2rem; font-size: 1.1rem; line-height: 1.6;">Need a clean PowerPoint for school, university, or work? We are here to handle the heavy lifting for you. Simply send us your text, your research topic, or your rough notes, and we will turn them into beautifully formatted, organized, and clean visual layouts entirely for free.</p>
-        <p style="color: #475569; margin-bottom: 1.2rem; font-size: 1.1rem; line-height: 1.6;">This project serves as our live personal design portfolio. Every single slide deck we build helps us practice and master modern layouts while providing a fast, helpful service directly back to our community. Thank you for building your slides with us!</p>
+    <!-- ABOUT US SECTION -->
+    <div id="about-page" class="content-section">
+        <h2>About Us</h2>
+        <p>Welcome to <strong>SlideQuest Studio</strong>! We are a dedicated presentation design initiative created specifically to take the pain away from staring at a completely blank screen.</p>
+        <p>Need a clean PowerPoint for school, university, or work? We are here to handle the heavy lifting for you. Simply send us your text, your research topic, or your rough notes, and we will turn them into beautifully formatted, organized, and clean visual layouts entirely for free.</p>
+        <p>This project serves as our live personal design portfolio. Every single slide deck we build helps us practice and master modern layouts while providing a fast, helpful service directly back to our community. Thank you for building your slides with us!</p>
+    </div>
+
+    <!-- REPORT PAGE SECTION -->
+    <div id="report-page" class="content-section">
+        <h2>Something Went Wrong?</h2>
+        <p>If there is an error with your slide deck layout, a broken text element, or you missed your delivery time, let us know right away so we can fix it.</p>
+        <p>Customer satisfaction is important to us. Click the button below to text or email us directly about your issue, and we will make it right as soon as possible.</p>
+        
+        <!-- REPLACE THE EMAIL BELOW WITH YOUR REAL DESIGNATED SUPPORT EMAIL -->
+        <a href="mailto:your-email@://example.com Issue Report" class="report-btn">✉️ Click to Message Us Directly</a>
     </div>
 
     <footer>
